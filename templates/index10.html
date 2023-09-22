@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Agendamento de turno</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+        
+    </head>
+    <body>
+        <div class="form-container">
+            <h1>Agendamento Automático de Turnos</h1>
+            <form name="scheduleForm" action="/schedule" method="post">
+                <div class="form-group">
+                    <label for="num_workers">Número de Trabalhadores:</label>
+                    <input type="number" class="form-control" id="num_workers" name="num_workers" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_shifts_day">Número de Turnos por Dia:</label>
+                    <input type="number" class="form-control" id="num_shifts_day" name="num_shifts_day" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_days_year">Número de Dias no Ano:</label>
+                    <input type="number" class="form-control" id="num_days_year" name="num_days_year" required>
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Data de Início (mm-dd-aaaa):</label>
+                    <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form-control" id="start_date" name="start_date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <script src="{{ url_for('static', filename='validacao.js') }}"></script>
+
+        
+    </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    background-image: url("../static/BackGround1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.0001);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    width: 300px;
+}
+h1 {
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+label {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+.response-msg {
+    background-color: transparent;
+}
+.alert-success {
+    background-color: transparent;
+}

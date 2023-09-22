@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GameChangerWork Guardian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        #tempoTrabalho {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 20px;
+            border: none;
+            color: white;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .time-input {
+            font-size: 1.2em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GameChangerWork Guardian</h1>
+    <p>Bem-vindo ao GameChangerWork Guardian, sua solução para um equilíbrio saudável entre vida profissional e pessoal.</p>
+
+    <p>Tempo de Trabalho: <span id="tempoTrabalho">00:00:00</span></p>
+
+    <input class="time-input" type="time" id="inicioTrabalho" min="00:00" max="23:59" required>
+    <label for="inicioTrabalho">Início do trabalho</label>
+
+    <input class="time-input" type="time" id="fimTrabalho" min="00:00" max="23:59" required>
+    <label for="fimTrabalho">Fim do trabalho</label>
+
+    <button onclick="iniciarCronometro()">Iniciar Trabalho</button>
+    <button onclick="pararCronometro()">Parar Trabalho</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
